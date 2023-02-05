@@ -25,7 +25,7 @@ SECRET_KEY = 'c438480f7e2eb5988e5cdcb3e96cef648a3314c5'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*', 'codemen.herokuapp.com']
+ALLOWED_HOSTS = ['*', '.vercel.app' , '.now.sh']
 
 
 # Application definition
@@ -133,14 +133,11 @@ USE_TZ = True
 STATIC_URL = '/static/'
 # MEDIA_URL = '/images/'
 
-STATICFILES_DIRS = [
-    BASE_DIR / 'static'
-]
 
 MEDIA_ROOT = BASE_DIR / 'assets/images'
-
-STATIC_ROOT = BASE_DIR / 'assets'
-
+import os
+STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build' ,'static')
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
