@@ -21,7 +21,8 @@
     }, 
     {
     "src": "/(.*)",
-    "dest": "CodeMen/wsgi.py"
+    "dest": "CodeMen/wsgi.py",
+    "memory" : 256
     }    
 ]
 }
