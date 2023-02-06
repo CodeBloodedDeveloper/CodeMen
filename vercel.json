@@ -4,6 +4,7 @@
     {
     "src": "CodeMen/wsgi.py",
     "use": "@vercel/python", 
+    "memory" : 256,
     "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
     }, 
     {
